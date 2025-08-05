@@ -91,8 +91,8 @@ export default function Index() {
             <Link className="w-250px mt-5 mb-4 btn btn-primary btn-lg" to="training" color="primary">
               {trans('label.startTraining')}
             </Link>
-            {isUpdateWordsLoading ? <Loading size="22" /> : `${trans('label.totalWords')} ${words.length}`}
-            {isUpdateWordsLoading ? <Loading size="22" /> : `${trans('label.studiedNumber')} ${studiedHashWords.length}`}
+            {isUpdateWordsLoading ? <Loading size="22" /> : <p>{`${trans('label.totalWords')} ${words.length}`}</p>}
+            <p>{`${trans('label.studiedNumber')} ${studiedHashWords.length}`}</p>
           </div>
         </div>
       </div>
